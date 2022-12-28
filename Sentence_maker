@@ -1,0 +1,18 @@
+def sentence_maker(phrase):
+    interrogative = ("how","what","where","when","who")
+    capitalized = phrase.capitalize()
+    if phrase.startswith(interrogative):
+        return "{}?".format(capitalized)
+    else:
+        return f"{capitalized}."
+        #return "%s." % capitalized
+        
+results=[]
+while True:
+    user_input = input("Enter a sentence: ")
+    if user_input == "\end":
+        break
+    else:
+        results.append(sentence_maker(user_input))
+        
+print(" ".join(results)) 
